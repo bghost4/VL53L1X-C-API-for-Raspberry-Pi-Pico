@@ -140,6 +140,10 @@
 #define VL53L1X_IDENTIFICATION__MODEL_ID                    0x010F
 #define VL53L1X_ROI_CONFIG__MODE_ROI_CENTRE_SPAD			0x013E
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 // Get the ST version
 VL53L1X_Status_t VL53L1X_GetSWVersion(VL53L1X_Version_t* ver);
 
@@ -365,5 +369,8 @@ VL53L1X_Status_t VL53L1X_GetSigmaThreshold(uint16_t dev, uint16_t* sigma);
 // Returns 0 on success, non-zero on failure.
 VL53L1X_Status_t VL53L1X_StartTemperatureUpdate(uint16_t dev);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // _VL53L1X_API_H_
